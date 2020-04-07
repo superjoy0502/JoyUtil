@@ -1,0 +1,9 @@
+name: JoyUtil
+main: com.github.superjoy0502.joyutil.Main
+version: 1.0.0
+commands:
+  set:
+    description: Sets a block on player position
+    usage: /set
+    permission: joyutil.set
+    permission-message: You don't have [joyutil.set] permission
