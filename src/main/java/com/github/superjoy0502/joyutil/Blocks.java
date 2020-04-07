@@ -12,6 +12,11 @@ public class Blocks {
         location.setY(location.getY()-1);
         World world = location.getWorld();
         Block block = world.getBlockAt(location);
-        block.setType(Material.GLASS);
+        if(!block.getType().equals(Material.AIR)){
+            player.sendMessage("There is already a block at that position!");
+        }
+        else{
+            block.setType(Material.GLASS);
+        }
     }
 }
