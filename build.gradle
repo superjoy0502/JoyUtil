@@ -9,17 +9,27 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    maven {
-        name = 'spigotmc-repo'
-        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    maven{
+        url = "https://papermc.io/repo/repository/maven-public/" // paper
     }
-    maven {
-        name = 'sonatype'
-        url = 'https://oss.sonatype.org/content/groups/public/'
+    maven{
+        url = "https://oss.sonatype.org/content/groups/public/" // sonatype
+    }
+    maven{
+        url = "https://repo.dmulloy2.net/nexus/repository/public/" // protocollib
+    }
+    maven{
+        url = "https://jitpack.io/" // tap
+    }
+    maven{
+        url = "https://maven.enginehub.org/repo/" // worldedit
     }
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    compileOnly 'org.spigotmc:spigot-api:1.15.2-R0.1-SNAPSHOT'
+    testCompile group: 'junit', name: 'junit', version: '4.12' // junit
+    implementation("com.destroystokyo.paper:paper-api:1.15.2-R0.1-SNAPSHOT") // paper
+    implementation("com.comphenix.protocol:ProtocolLib:4.5.0") // protocollib
+    implementation("com.github.noonmaru:tap:2.3.3") // tap
+    implementation("com.sk89q.worldedit:worldedit-bukkit:7.1.0") // worldedit
 }
